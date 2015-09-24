@@ -1,0 +1,16 @@
+body {
+	background-color: #FFE;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	padding: 5px;
+}
+img {
+	border: solid 3px black;
+}
+h3 {
+	color: #887;
+}
+a {
+	color: #900;
+}
