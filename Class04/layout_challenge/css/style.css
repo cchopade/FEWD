@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clear {
+	overflow: auto;
+}
+header {
+	background: red;
+}
+article {
+	background: yellow;
+	float: left;
+	width: 60%
+}
+aside {
+	background: green;
+	float: right;
+	width: 40%;
+}
+footer {
+	background: blue;
+	clear: both;
+}
+div {
+	border: 1px solid black;
+	padding: 20px;
+	height: 150px;
+	margin: 10px;
+}

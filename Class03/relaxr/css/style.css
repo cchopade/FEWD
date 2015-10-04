@@ -1,8 +1,8 @@
 /*
-Project Name: Blank Template
-Client: Your Client
-Author: Your Name
-Developer @GA in NYC
+Project Name: Relaxr Homepage 
+Client: Relaxr
+Author: Savanna Rovira
+Developer @GA in DC
 */
 
 
@@ -49,9 +49,7 @@ body {
      color: #000;
      font-size: 12px;
      line-height: 1.4;
-     font-family: Helvetica, Arial, sans-serif;
-     background: url(../images/header_bg.jpg) no-repeat center top rgb(134,141,157);
-      background-size: cover;
+     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 
@@ -66,18 +64,128 @@ body {
   height: 500px;
 
 }
-
 header {
-
+  color: white;
+  padding: 15px 100px 100px 100px;
+  background-image: url(../images/header_bg.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background position: center center;
 }
-
-footer {
-
+header h1 {
+  font-weight: 800;
+  font-size: 24px; 
 }
-
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+header h2 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 60px 25px 30px;
+}
+header button {
+  font-weight: 800;
+  font-size: 14px;
+  background-color: #f9e42e;
+  border-radius: 5px;
+  padding: 5px 25px;
+  box-shadow: none;
+  border: 0;
+  display: block;
+  margin: auto;
+}
+.benefits {
+  background-color: #f0efef;
+  padding: 37px;
+}
+article h2 {
+  font-weight: 600;
+  font-size: 20px;
+  padding: 12px 0px;
+}
+.benefits p {
+  font-weight: 300;
+  font-size: 13px;
+}
+ul {
+  font-weight: 300;
+  font-size: 13px;
+  padding: 15px 70px;
+  list-style-type: disc; /*Why did I have to specify the list style type? Shouldn't the default just be bullets (discs?). The bullets weren't working until I added this in. */
+}
+li {
+  padding: 2px;
+}
+.AmandaQuote {
+  text-align: center;
+  color: white;
+  padding: 50px 200px;
+  background-image: url(../images/testimonial_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top; 
+}
+blockquote {
+  font-weight: 300;
+  font-style: italic; /* Why doesn't font-weight: 300 italic work? */
+  font-size: 18px;
+}
+blockquote footer {
+  font-weight: 600; /* Do I have to add an extra bold here? Semibold doesn't look as bold as in the picture */
+  font-style: normal;
+  font-size:18px; 
+}
+.SignUpButton {
+  text-align: center;
+   background-color: #f9e42e;
+   padding: 25px;
+}
+.SignUpButton button {
+  background-color: #033048;
+  color: white;
+  font-weight: 800;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 5px 25px;
+  box-shadow: none;
+  border: 0;
+}
+.PageFooter {
+  text-align: center;
+  color: white;
+  background-color: #121212;
+  padding: 20px;
+}
+footer p {
+  color: #f9e42e;
+  font-weight: 800;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+.FacebookPhoto {
+  background-image: url(../images/facebook.png);
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  margin-left: 15px;
+}
+.TwitterPhoto {
+  background-image: url(../images/twitter.png);
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+}
+small {
+  font-weight: 600;
+  font-size: 9px;
+  padding-top: 20px;
+  display: block;
+}
 
 
 
