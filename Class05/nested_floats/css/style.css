@@ -1,0 +1,94 @@
+/*************
+*  Utility
+**************/
+
+/* Box Sizing */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+/* Clear Class */
+.clear{
+	overflow: auto;
+}
+
+/* Clearfix */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/*************
+*  Base
+**************/
+
+body{	
+  color: #333;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+h1{
+	margin: 0;
+}
+
+/*************
+* Navigation
+**************/
+
+ul{
+	background: purple;
+	margin: 0;
+	padding: 5px 5px 5px 30px;	
+}
+
+li{
+	background: rgba(255,255,255,.6);
+  width: 10%;
+  list-style: none;
+  padding: 5px 10px;
+  float: left;
+  margin-right: 1%;
+}
+
+/*************
+*  Layout
+**************/
+
+header {
+  background: red;
+  float: left;
+  width: 100%;
+}
+section {
+  background: yellow;
+  float: left;
+  width: 60%;
+}
+aside {
+  background: green;
+  float: right;
+  width: 40%;
+}
+footer {
+  background: blue;
+  float: left;
+  width: 100%;
+}
+
+.placeholder {
+  border: 1px solid black;
+  background: rgba(255,255,255,.6);
+  padding: 20px;
+  min-height: 150px;
+  margin: 10px;
+}
+
+
+

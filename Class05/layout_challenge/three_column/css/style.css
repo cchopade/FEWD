@@ -1,0 +1,50 @@
+/* Box Sizing */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Base Styles */
+
+body {
+	color: #333;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+/* Layout */
+header {
+	background-color: red;
+	padding: 10px;
+}
+article {
+	background-color: yellow;
+	padding: 10px;
+	width: 60%;
+	float: left;
+	margin-left: 20%;
+}
+aside {
+	background-color: green;
+	padding: 10px;
+	width: 20%;
+	float: left;
+}
+.sidebar1 {
+	margin-left: -80%;
+}
+.sidebar2 {
+}
+footer {
+	background-color: blue;
+	padding: 10px;
+	clear: both;
+}
+.placeholder {
+	border: 1px solid #333;
+	height: 150px;
+	background-color: rgba(255, 255, 255,.6);
+	padding: 20px;
+}
