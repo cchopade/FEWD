@@ -38,23 +38,16 @@ li {
   	float: left;
   	margin-right: 10%
 }
-article {
-	background-color: yellow;
-	padding: 10px;
-	width: 100%;
-}
 aside {
-	background-color: green;
-	padding: 10px;
-	width: 33.3%;
-	float: left;
-}
-footer {
 	background-color: blue;
 	padding: 10px;
-	width: 100%;
-	clear: both;
 }
+article {
+	background-color: green;
+	padding: 10px;
+}
+
+
 
 .placeholder {
 	border: 1px solid #333;
