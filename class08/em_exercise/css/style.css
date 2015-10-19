@@ -1,0 +1,42 @@
+html{
+	font-size: 10px;
+}
+/**
+ * Style using "em"s
+ */
+h1{
+	background: green;
+	color: yellow;
+	padding: 10px;
+	border: 2px solid black;
+	font-size: 4rem;
+}
+h2{
+	background: yellow;
+	color: green;
+	padding: 10px;
+	border: 2px solid black;
+	font-size: 3rem;
+}
+article{
+	background: purple;
+	color: gold;
+	padding: 10px;
+	border: 2px solid black;
+	font-size: 2rem;
+}
+p{
+	background: blue;
+	color: red;
+	padding: 10px;
+	border: 2px solid black;
+	font-size: 1rem;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 500px) {
+	html {
+		font-size: 5px;
+	}
+}
