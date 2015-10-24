@@ -1,0 +1,56 @@
+Pseudo Code for theromostat 
+
+target_temperature = 72
+current_temperature = get_current_temperature
+
+repeat 
+	if current_temperature < target_temperature - 5
+		turn_heater_on 
+	if current_temperature >= target_temperature 
+		turn_heater_off
+
+------------------------------------------------------------------
+Psuedo Code for Rock Paper Scissors
+paper over rock
+rock over scissors
+scissors over paper 
+
+player1 and player2 engage
+player1 choose hand 
+player2 choose hand 
+
+Repeat 3x
+	if (player1 = paper) and (player2 = rock)
+		player1 wins 
+	if (player1 = rock) and (player2 = paper)
+		player2 wins 
+	if (player1 = rock) and (player2 = scissors)
+		player1 wins
+	if (player1 = scissors) and (player2 = rock)
+		player2 wins 
+	if (player1 = scissors) and (player2 = paper)
+		player1 wins 
+	if (player1 = paper) and (player2 = scissors)
+		player2 wins 
+	if (player1 = rock) and (player2 = rock)
+		tie
+	if (player1 = paper) and (player2 = paper)
+		tie
+	if (player1 = scissors) and (player2 = scissors)
+		tie
+
+count the number of wins for each player 
+
+if player1 wins > player2
+	player1 wins the game 
+else 
+	player2 wins the game 
+
+
+
+
+
+
+
+
+
