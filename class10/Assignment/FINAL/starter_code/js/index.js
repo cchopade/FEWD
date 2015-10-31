@@ -30,7 +30,10 @@ function slideTextDown() {
 function slideTextUp() {
 	$('#show-this-on-click').slideUp()
 	$('.readless').hide();
-	$('.readmore').delay(1200).show(); 
+	setTimeout(function(){
+		$('.readmore').show();
+	}, 500)
+	 
 }
 function slideTextDown2() {
 	$('#learnmoretext').slideDown();
@@ -47,7 +50,7 @@ $('.readmore').click(function() {
 //Questions 
 //Why do we have the hide class a few times in the html? How can i combine this code?
 //Am i putting the jquery file in the right place on the html? In class we said it goes before our own js file but in the homework it was originally after before I changed it.  
-// Why isn't my delay command working? I want "read more" to delay showing until all of the text has slid up. 
+// Why isn't my delay command working? I want "read more" to delay showing until all of the text has slid up. (Chris gave me a hack here, which is reflected in this updated version. But previously I was using .delay(1200) in my function but wasn't seeing anything happen)
 //What is the benefit of anonymous functions? 
 
 });
