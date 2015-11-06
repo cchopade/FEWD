@@ -33,8 +33,8 @@ $('#submit-btn').click(switchBackground);
 
 //Function
 function switchBackground(event) {
-	event.preventDefault();
-	city = $('#city-type').val();
+	event.preventDefault(); // console.log("I work"); 
+	city = $('#city-type').val(); //console.log(city); 
 	if(city === 'San Francisco'|| city === 'SF' || city === 'Bay Area') { 
 		$('body').attr('class','sf');
 	}
