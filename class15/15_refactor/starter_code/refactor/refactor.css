@@ -1,0 +1,94 @@
+/*Remove inline*/
+/*Gotes to*/
+select{
+     width:150px;
+}
+
+/*Combine multiples*/
+#buttons-wrapper{
+     padding:10px;
+     border:1px solid black;
+     background:orange;
+}
+#buttons-wrapper>form{
+     padding:10px;
+     border:1px solid black;
+}
+/*Goes to*/
+#buttons-wrapper,#buttons-wrapped>form {
+     padding:10px;
+     border:1px solid black;
+} 
+#buttons-wrapped {
+     background: orange;
+}
+
+
+
+
+
+/*Rename classes/ids for readability*/
+#img1{
+     margin-top: 50px;
+}
+/*Goes to*/
+#banner-image {
+     margin-top:50px;
+}
+
+
+
+
+
+/*Organize CSS*/
+/*Global Styles*/
+body{
+     background-image:url(../images/anImage.png);
+}
+a{
+     color:red;
+}
+a:hover{
+     color:purple;
+}
+/*Layout Styles*/
+#container>.col{
+     width:50%;
+}
+#container>img{
+     border:1px solid red;
+}
+/*Header Styles*/
+header{
+     height:80px;
+}
+header>ol{
+     list-style: none;
+}
+#navigation-wrapper{
+     float:left;
+}
+.list-item{
+     width:200px;
+}
+/*Footer Styles*/
+footer{
+     text-align: right;
+}
+footer>#company-name{
+     font-weight: bold;
+}
+
+
+
+
+
+/*Goes to*/
+
+
+
+/*Create classes for large css changes
+$("#container").css({background:"red",fontSize:"12px",color:"purple",boxShadow:"0 0 10px #ccc";})
+*/
+
+/*Goes to*/
