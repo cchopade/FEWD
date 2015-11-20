@@ -115,3 +115,41 @@ function resize() {
 	init();
 }
 // End Starfield 
+
+
+//Starfield Game 
+
+// Arrow Keypresses
+$(document).on("keydown", moveShip);
+
+function moveShip (event) { 
+	var xAxisPosition = $("#spaceship").css("left");
+	var yAxisPosition = $("#spaceship").css("top");
+	var xAxisPositionNum = parseInt(xAxisPosition);
+	var yAxisPositionNum = parseInt(yAxisPosition);
+
+	var key = event.keyCode;
+	if (key === 38) { //top key
+		var yAxisPositionPixel = (yAxisPositionNum - 4) + "px"; 
+		$("#spaceship").css("top", yAxisPositionPixel);
+	}
+	if (key === 40) { //bottom key
+		var yAxisPositionPixel = (yAxisPositionNum + 4) + "px"; 
+		$("#spaceship").css("top", yAxisPositionPixel); 
+	}
+	if (key === 39) { //right key
+		var xAxisPositionPixel = (xAxisPositionNum + 4) + "px"; 
+		$("#spaceship").css("left", xAxisPositionPixel);
+	}
+	if (key === 37) { //left key 
+		var xAxisPositionPixel = (xAxisPositionNum - 4) + "px"; 
+		$("#spaceship").css("left", xAxisPositionPixel);
+	}
+	
+}
+//Detect collision
+//When rocket moves,is that event trigger?
+
+function detectCollision () {
+
+}

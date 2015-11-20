@@ -5,6 +5,14 @@
 	    <meta name="description" content="Explore fascinating celestial bodies with this interactive web game.">
 
 	    <title>Universe Explorer</title>
+		<!-- Latest compiled and minified CSS -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/starfieldgame.css" media="screen" type="text/css" />
@@ -14,38 +22,78 @@
         onresize="resize()"
         onorientationchange="resize()">
     	<canvas id="starfield" ></canvas>
-    	<nav> 
-    		<a href="about.html">About</a>
-    	</nav>
-		<a href="mars.html"> <img src="images/celestialbody.png" alt="celestial body" id="mars"/>
-		</a> 
-		<img src="images/celestialbody.png" alt="celestial body" id="comet"/> 
-		<img src="images/celestialbody.png" alt="celestial body" id="europa"/> 
-		<img src="images/celestialbody.png" alt="celestial body" id="pluto"/> 
-		<img src="images/celestialbody.png" alt="celestial body" id="hdab"/> 
-		<img src="images/celestialbody.png" alt="celestial body" id="kepler"/> 
-		<img src="images/celestialbody.png" alt="celestial body" id="kic"/> 
-		<img src="images/celestialbody.png" alt="celestial body" id="andromeda"/> 
-		<img src="images/spaceship.png" alt="spaceship" id="spaceship"/> 
-		<aside id='infoPane'>
-			<section id="sectionA">
-				<h2> Light Years from Earth </h2>
-				<p> # </p> 
-			</section>
-			<section id="sectionB">
-				<h2> Bodies Explored </h2>
-				<p> # </p> 
-			</section>
-			<section id="sectionC">
-				<h2> Communications Sent to NASA </h2>
-				<ul>
-					<li> Placeholder Text </li>
-					<li> Placeholder Text </li>
-					<li> Placeholder Text </li>
-				</ul>
-			</section> 
-		</aside> 
-		<footer> Earth </footer>
+		
+	<div class="row">
+		<div class="col-xs-10">	
+			<div id="leftSide">
+		    	<nav> 
+		    		<a href="about.html">About</a>
+		    	</nav>
+
+				<div class="row">
+					<div class="col-xs-4">
+						<a href="mars.html"> <img src="images/mars.png" alt="mars" id="mars"/>
+						</a> 
+						<div id="marsInfo">Info here</div>
+					</div>
+					<div class="col-xs-4">
+						<img src="images/comet.png" alt="comet" id="comet"/> 
+					</div>
+					<div class="col-xs-4">
+						<img src="images/europa.png" alt="europa" id="europa"/> 
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">
+						<img src="images/pluto.png" alt="pluto" id="pluto"/>
+					</div>
+					<div class="col-xs-6">
+						<img src="images/ab.png" alt="hdab" id="hdab"/> 
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-4">
+						<img src="images/kepler.png" alt="kepler" id="kepler"/>
+					</div>
+					<div class="col-xs-4">
+						<img src="images/dyson.png" alt="kic" id="kic"/> 
+					</div>
+					<div class="col-xs-4">
+						<img src="images/andromeda.png" alt="andromeda" id="andromeda"/> 
+					</div>
+				</div>
+			</div>
+			<img src="images/spaceship.png" alt="spaceship" id="spaceship"/> 
+			<footer> <img src="images/earth.png" alt="earth" id="earth"/> </footer>
+		</div>
+
+		<div class="col-xs-2">	
+			<div id="rightSide">
+				<aside id='infoPane'>
+					<section id="sectionA">
+						<h2> Light Years from Earth </h2>
+						<p> # </p> 
+					</section>
+					<section id="sectionB">
+						<h2> Bodies Explored </h2>
+						<p> # </p> 
+					</section>
+					<section id="sectionC">
+						<h2> Communications Sent to NASA </h2>
+						<ul>
+							<li> Placeholder Text </li>
+							<li> Placeholder Text </li>
+							<li> Placeholder Text </li>
+						</ul>
+					</section> 
+				</aside> 
+			</div>
+		</div>
+	</div>
+
+
+
+
 
   </body>
 

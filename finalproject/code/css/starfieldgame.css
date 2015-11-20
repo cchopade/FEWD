@@ -28,6 +28,10 @@ body, html {
   width: 100%;
   overflow: hidden;
 }
+#leftSide .row div {
+	text-align: center;
+}
+
 
 /* Starfield Game Styling */ 
 nav {
@@ -35,17 +39,16 @@ nav {
 	width: 10%;
     position: absolute;
     text-align: center;
-    padding: 1%;
+    padding: .5%;
+    border-radius: 5px;
+    opacity: .75;
 }
-
-#infoPane {
-	position: absolute;
-	background-color: grey;
-	width: 10%;
-	right: 0px;
-	top: 0px;
-	height: 100%;
-	top: 0px;
+nav a {
+	text-decoration: none;
+	color: black;
+}
+nav a:hover {
+	font-weight: bold;
 }
 section {
 	border-bottom: 2px solid black;
@@ -70,55 +73,27 @@ ul li {
 	list-style: disc;
 }
 img {
-	position: absolute;
-	width: 150px;
-}
-#mars {
-	bottom: 10%;
-	left: 10%;
-}
-#comet {
-	bottom: 10%;
-	left: 41%;
-}
-#europa {
-	bottom: 10%;
-	right: 10%;
-}
-#pluto {
-	top: 40%;
-	left: 24%;
-}
-#hdab {
-	top: 40%;
-	right: 24%;
+	max-width: 134px;
 
 }
-#kepler {
-	top: 10%;
-	left: 10%;
+#marsInfo {
+	background-color: white;
+	padding: 20px;
+	display: none;
 }
-#kic {
-	top: 10%;
-	left: 41%;
-}
-#andromeda {
-	top: 10%;
-	right: 10%;
-
+#right {
+	background-color: grey;
+	opacity: .75;
+	height: 100%;
 }
 #spaceship {
-	bottom: 2%;
+	left: 0px;
+	top: 0px;
+	position: absolute;
 }
-footer {
-	position: absolute; 
-	bottom: 0px;
-	background-color: green;
-	height:45px;
-    width:100%;
-    border-radius: 90px 90px 0 0;
-    text-align: center;
-}
+
+
+
 
 /* Mars Styling */ 
 #marsBody {
