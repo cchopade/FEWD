@@ -74,7 +74,12 @@ ul li {
 }
 img {
 	max-width: 134px;
-
+}
+#hdab {
+	margin-right: 40%;
+}
+#pluto {
+	margin-left: 40%;
 }
 #marsInfo {
 	background-color: white;
@@ -90,6 +95,24 @@ img {
 	left: 0px;
 	top: 0px;
 	position: absolute;
+}
+#topRow {
+	margin-top: 5%;
+	margin-bottom: 2%;
+}
+#bottomPlanetRow {
+	margin-bottom: 10%;
+	margin-top: 2%;
+}
+#leftSide nav {
+	display: none;
+}
+
+/*right Side */ 
+#infoPane {
+	background-color: grey;
+	opacity: .75;
+	height: 100%;
 }
 
 
