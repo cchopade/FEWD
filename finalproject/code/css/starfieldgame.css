@@ -80,11 +80,13 @@ img {
 }
 #pluto {
 	margin-left: 40%;
-}
+}	
+
 #marsInfo {
 	background-color: white;
 	padding: 20px;
 	display: none;
+
 }
 #right {
 	background-color: grey;
@@ -107,15 +109,11 @@ img {
 #leftSide nav {
 	display: none;
 }
-
-/*right Side */ 
 #infoPane {
 	background-color: grey;
 	opacity: .75;
 	height: 100%;
 }
-
-
 
 
 /* Mars Styling */ 
@@ -131,7 +129,17 @@ img {
     padding: 4px;
     text-align: center;
 }
-
+#spaceshipOnMars {
+	position: absolute;
+	top: 0;
+	left: 0; 
+}
+#flag {
+	position: absolute;
+    top: 28%;
+    left: 49%;
+    display: none;
+}
 
 /* About Page Styling */
 h1 {

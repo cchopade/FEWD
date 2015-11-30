@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="description" content="Who I am and why I made this page.">
+
+	    <title>Course Application</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+	</head>
+	<body>
+		<article id="courseApplicationPage">
+			<h1> Course Application </h1>
+			<form method="post" action="#">
+				<fieldset>
+					<legend> Your Contact Info </legend>
+					<label>Name 
+						<input type="text" name="firstName" placeholder="First">
+						<input type="text" name="lastName" placeholder="Last">
+					</label>
+					<label> Phone Number 
+						<input type="text" name="areaCode" maxlength="3" size="3" placeholder="202"> <!-- size is in characters -->
+						-
+						<input type="text" name="firstThree" maxlength="3" size="3" placeholder="412">
+						-
+						<input type="text" name="lastFour" maxlength="4" size="4" placeholder="6918">
+					</label>
+					<label> Address
+						<input type="text" name="streetAddress" placeholder= "Street Address">
+						<input type="text" name="addressLine2" placeholder= "Address Line 2">
+						<input type="text" name="city" placeholder= "City">
+						<input type="text" name="state" placeholder= "State">
+						<input type="text" name="postalCode" placeholder= "Postal Code">
+					</label>
+				</fieldset>
+				<fieldset>
+					<legend> Skills &amp; Interests </legend>
+					<label for="courseList"> Course <label>
+					<select id="courseList">
+						<option value="selectOne"> Select One </option>
+						<optgroup label="Web Development">
+							<option value="firstOption">Front-End</option>
+							<option value="secondOption">Back-End</option>
+						</optgroup>
+						<optgroup label="Design">
+							<option value="thirdOption">Visual Design</option>
+							<option value="fourthOption">User Experience</option>
+						</optgroup>
+					</select>
+					<label> Past Experience
+					<input type="text" name="experience">
+					</label>
+				</fieldset>
+				<fieldset>
+					<legend> Anything Else? </legend>
+					<label for="referralList"> Referral <label>
+					<select id="referralList">
+						<option value="firstOption">None</option>
+						<option value="secondOption">Friend</option>
+						<option value="thirdOption">Instructor</option>
+						<option value="fourthOption">Online</option>
+					</select>
+					<label> Comments
+					<input type="text" name="comments">
+					</label>
+				</fieldset>
+				<button value="save"> Save as Draft </button>
+				<input type="submit" value="Submit">  
+		</form>
+		</article>
+	</body>
+
+</html>

@@ -145,11 +145,71 @@ function moveShip (event) {
 		var xAxisPositionPixel = (xAxisPositionNum - 4) + "px"; 
 		$("#spaceship").css("left", xAxisPositionPixel);
 	}
-	
 }
 //Detect collision
-//When rocket moves,is that event trigger?
+//Figure out coordinates of each planet (top and left)
+//Add a buffer to the planet coordinates 
+//Find the spaceship position
+//If the spaceship position = the planet's position (with a buffer), then display the planet's info box 
 
-function detectCollision () {
+//Trying this first for Mars
 
-}
+// function detectCollision (event) {
+// 	var marsPosition = $("#mars").offset();
+// 	var marsEntryZonePosition = (marsPosition + 2%); 
+
+// 	var cometPosition = $("#comet").offset();
+// 	var europaPosition = $("#europa").offset();
+// 	var plutoPosition = $("#pluto").offset();
+// 	var hdabPosition = $("#hdab").offset();
+// 	var keplerPosition = $("#kepler").offset();
+// 	var kicPosition = $("#kic").offset();
+// 	var andromedaPosition = $("#andromeda").offset();
+// 	var spaceshipPosition = $("spaceship").offset ();
+
+// 	if (spaceshipPosition = marsEntryZonePosition) {
+// 		$("marsInfo").css("display","inline");
+// 	}
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Mission Control Sidebar
+//Miles from Earth 
+//event listener - either rocketship in the area OR display is being displayed
+//function - change the DOM using js -- just plug in how far it is
+
+//Bodies Explored 
+
+//Communications sent to NASA 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
