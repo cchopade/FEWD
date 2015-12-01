@@ -1,22 +1,16 @@
 $(document).ready(function() {
 
-//Spaceship Landing Animation 
-function landSpaceship (event) {
-	event.preventDefault(); 
-	$("#spaceshipOnMars").animate({ top: "50%"}, {left : "20%"}, 1500);
-});
-
-
-//Plant Flag 
+//Event Listeners
+landSpaceship();
 $("#plantFlag").click(plantFlag);
 
+});
+
+//Functions 
 function plantFlag(event) {
-	$("flag").css("display","inline"); 
+	$("#flag").css("display","block"); 
 }
 
-
-
-
-
-
-});
+function landSpaceship() {
+	$("#spaceshipOnMars").animate({ top: "50%", left : "10%"}, 1500);
+}

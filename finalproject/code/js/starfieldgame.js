@@ -124,18 +124,23 @@ $(document).on("keydown", moveShip);
 
 function moveShip (event) { 
 	var xAxisPosition = $("#spaceship").css("left");
-	var yAxisPosition = $("#spaceship").css("top");
+	var yAxisPosition = $("#spaceship").css("bottom");
 	var xAxisPositionNum = parseInt(xAxisPosition);
 	var yAxisPositionNum = parseInt(yAxisPosition);
 
+	console.log("X position: " + xAxisPosition);
+	console.log("Y position: " + yAxisPosition);
+	console.log("X val: " + xAxisPositionNum);
+	console.log("Y val: " + yAxisPositionNum);
+
 	var key = event.keyCode;
 	if (key === 38) { //top key
-		var yAxisPositionPixel = (yAxisPositionNum - 4) + "px"; 
-		$("#spaceship").css("top", yAxisPositionPixel);
+		var yAxisPositionPixel = (yAxisPositionNum + 4) + "px"; 
+		$("#spaceship").css("bottom", yAxisPositionPixel);
 	}
 	if (key === 40) { //bottom key
-		var yAxisPositionPixel = (yAxisPositionNum + 4) + "px"; 
-		$("#spaceship").css("top", yAxisPositionPixel); 
+		var yAxisPositionPixel = (yAxisPositionNum - 4) + "px"; 
+		$("#spaceship").css("bottom", yAxisPositionPixel); 
 	}
 	if (key === 39) { //right key
 		var xAxisPositionPixel = (xAxisPositionNum + 4) + "px"; 
@@ -145,32 +150,60 @@ function moveShip (event) {
 		var xAxisPositionPixel = (xAxisPositionNum - 4) + "px"; 
 		$("#spaceship").css("left", xAxisPositionPixel);
 	}
+
+	detectCollision();
 }
-//Detect collision
-//Figure out coordinates of each planet (top and left)
-//Add a buffer to the planet coordinates 
-//Find the spaceship position
-//If the spaceship position = the planet's position (with a buffer), then display the planet's info box 
 
-//Trying this first for Mars
+// Detect collision
+// Figure out coordinates of each planet (top and left)
+// Add a buffer to the planet coordinates 
+// Find the spaceship position
+// If the spaceship position = the planet's position (with a buffer), then display the planet's info box 
 
-// function detectCollision (event) {
-// 	var marsPosition = $("#mars").offset();
-// 	var marsEntryZonePosition = (marsPosition + 2%); 
+function detectCollision() {
+	var marsPositionTop = $("#mars").offset().top; 
+	var marsPositionBottom = $("#mars").offset().top + $("#mars").outerHeight(true); 
+	var marsPositionLeft = $("#mars").offset().left; 
+	var marsPositionRight = $("#mars").offset().left + $("#mars").outerWidth(); 
 
-// 	var cometPosition = $("#comet").offset();
-// 	var europaPosition = $("#europa").offset();
-// 	var plutoPosition = $("#pluto").offset();
-// 	var hdabPosition = $("#hdab").offset();
-// 	var keplerPosition = $("#kepler").offset();
-// 	var kicPosition = $("#kic").offset();
-// 	var andromedaPosition = $("#andromeda").offset();
-// 	var spaceshipPosition = $("spaceship").offset ();
+	//var marsEntryZoneTop = marsPositionTop + (marsPositionTop * 0.02);
+	// var marsEntryZoneLeft = marsPositionLeft + (marsPositionLeft * 0.02);  
 
-// 	if (spaceshipPosition = marsEntryZonePosition) {
-// 		$("marsInfo").css("display","inline");
-// 	}
-// }
+
+
+	// var cometPosition = $("#comet").offset();
+	// var europaPosition = $("#europa").offset();
+	// var plutoPosition = $("#pluto").offset();
+	// var hdabPosition = $("#hdab").offset();
+	// var keplerPosition = $("#kepler").offset();
+	// var kicPosition = $("#kic").offset();
+	// var andromedaPosition = $("#andromeda").offset();
+
+	var spaceshipPositionTop = $("#spaceship").offset().top; 
+	var spaceshipPositionBottom = $("#spaceship").offset().top + $("#spaceship").outerHeight(true); 
+	var spaceshipPositionLeft = $("#spaceship").offset().left; 
+	var spaceshipPositionRight = $("#spaceship").offset().left + $("#spaceship").outerWidth(); 
+
+	 console.log('Spaceship Bottom: ' +spaceshipPositionBottom);
+	 console.log('Mars Top: ' +marsPositionTop);
+
+	if (((spaceshipPositionBottom >= marsPositionTop) && (spaceshipPositionBottom <= marsPositionBottom)) && ((spaceshipPositionRight >= marsPositionLeft) && (spaceshipPositionRight <= marsPositionRight))) {
+		//if((spaceshipPositionRight >= marsPositionLeft) && (spaceshipPositionRight <= marsPositionRight)) {
+			$("#marsInfo").css("display","block");
+		//}
+	}
+	else if(((spaceshipPositionTop <= marsPositionBottom) && (spaceshipPositionTop >= marsPositionTop)) && ((spaceshipPositionRight >= marsPositionLeft) && (spaceshipPositionRight <= marsPositionRight))){
+		// if ((spaceshipPositionLeft <= marsPositionRight) && (spaceshipPositionLeft >= marsPositionLeft)) {
+		// 	$("#marsInfo").css("display","block");
+		// }
+		//if((spaceshipPositionRight >= marsPositionLeft) && (spaceshipPositionRight <= marsPositionRight)) {
+			$("#marsInfo").css("display","block");
+		//}
+	}
+	else {
+		$("#marsInfo").css("display","none"); 
+	}
+}
 
 
 
