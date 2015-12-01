@@ -81,13 +81,40 @@ img {
 #pluto {
 	margin-left: 40%;
 }	
-
-#marsInfo {
+#andromeda {
+	margin-top: 11%;
+}
+.eduInfo {
 	background-color: white;
-	padding: 20px;
-	display: none;
+	opacity: .75;
 	position: absolute;
-
+	padding: 20px;
+	/*display: none;*/
+}
+#keplerInfo {
+	left: 15%;
+}
+#marsInfo {
+	left: 15%;
+}
+#plutoInfo {
+	left: 58%;
+}
+#hdabInfo {
+	right:58%;
+}
+#kicInfo {
+	left: 37%;
+}
+#cometInfo {
+	left: 37%;
+	bottom: 103%;
+}
+#europaInfo {
+	right: 15%;
+}
+#andromedaInfo {
+	right: 15%;
 }
 #right {
 	background-color: grey;
@@ -98,6 +125,7 @@ img {
 	left: 496px;
 	bottom: 116px;
 	position: absolute;
+	height: 13%;
 }
 #topRow {
 	margin-top: 5%;

@@ -135,19 +135,19 @@ function moveShip (event) {
 
 	var key = event.keyCode;
 	if (key === 38) { //top key
-		var yAxisPositionPixel = (yAxisPositionNum + 4) + "px"; 
+		var yAxisPositionPixel = (yAxisPositionNum + 6) + "px"; 
 		$("#spaceship").css("bottom", yAxisPositionPixel);
 	}
 	if (key === 40) { //bottom key
-		var yAxisPositionPixel = (yAxisPositionNum - 4) + "px"; 
+		var yAxisPositionPixel = (yAxisPositionNum - 6) + "px"; 
 		$("#spaceship").css("bottom", yAxisPositionPixel); 
 	}
 	if (key === 39) { //right key
-		var xAxisPositionPixel = (xAxisPositionNum + 4) + "px"; 
+		var xAxisPositionPixel = (xAxisPositionNum + 6) + "px"; 
 		$("#spaceship").css("left", xAxisPositionPixel);
 	}
 	if (key === 37) { //left key 
-		var xAxisPositionPixel = (xAxisPositionNum - 4) + "px"; 
+		var xAxisPositionPixel = (xAxisPositionNum - 6) + "px"; 
 		$("#spaceship").css("left", xAxisPositionPixel);
 	}
 
