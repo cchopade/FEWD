@@ -27,6 +27,7 @@ body, html {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  font-size: 1em;
 }
 #leftSide .row div {
 	text-align: center;
@@ -88,34 +89,67 @@ img {
 	background-color: white;
 	opacity: .75;
 	position: absolute;
-	padding: 20px;
-	/*display: none;*/
+	padding: 0px;
+	border-radius: 5px;
+	width: 50%;
 }
+.eduInfo h2 {
+	text-align: center;
+	padding-bottom:0px;
+}
+.eduInfo em {
+	font-weight: bold;
+}
+.eduInfo p {
+	font-size: .8em;
+}
+.basicInfo {
+	padding-bottom: 1%;
+}
+.funFact {
+	padding-bottom: 1%;
+}
+
 #keplerInfo {
-	left: 15%;
+	left: 25%;
 }
 #marsInfo {
-	left: 15%;
+	left: 25%;
+}
+#marsLink {
+	text-decoration: none;
+	color: red;
+	font-size: .9em;
+}
+#marsLink:hover {
+	font-weight: bold;
 }
 #plutoInfo {
-	left: 58%;
+	left: 51%;
+	width: 37%;
 }
 #hdabInfo {
-	right:58%;
+	right: 48%;
+    width: 39%;
 }
 #kicInfo {
-	left: 37%;
+	left: 25%;
+    width: 51%;
+    padding-left:.5%;
+    padding-right:.5%;
 }
 #cometInfo {
-	left: 37%;
-	bottom: 103%;
+	width: 97%;
+	left: 8%;
+    bottom: -80%;
 }
 #europaInfo {
-	right: 15%;
+	right: 25%;
 }
 #andromedaInfo {
-	right: 15%;
+	right: 25%;
 }
+
 #right {
 	background-color: grey;
 	opacity: .75;
