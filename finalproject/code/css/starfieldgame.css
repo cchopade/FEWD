@@ -28,6 +28,7 @@ body, html {
   width: 100%;
   overflow: hidden;
   font-size: 1em;
+  cursor: url(../images/astronaut.png),default;
 }
 #leftSide .row div {
 	text-align: center;
@@ -72,6 +73,7 @@ section p {
 }
 ul li {
 	list-style: disc;
+	list-style-position: inside;
 }
 img {
 	max-width: 134px;
@@ -92,6 +94,10 @@ img {
 	padding: 0px;
 	border-radius: 5px;
 	width: 50%;
+	display: none;
+}
+.eduInfo:hover {
+	cursor: default;
 }
 .eduInfo h2 {
 	text-align: center;
@@ -115,6 +121,7 @@ img {
 }
 #marsInfo {
 	left: 25%;
+	bottom: 5%;
 }
 #marsLink {
 	text-decoration: none;
@@ -166,7 +173,7 @@ img {
 	margin-bottom: 2%;
 }
 #bottomPlanetRow {
-	margin-bottom: 10%;
+	margin-bottom: 8%;
 	margin-top: 2%;
 }
 #leftSide nav {
@@ -183,7 +190,7 @@ img {
 #marsBody {
 	background: url(../images/marssurface.png) no-repeat top center #131e27;
 	background-size: 1970px;
-	cursor: url(../images/astro.png);
+	cursor: url(../images/astronaut.png),default;
 }
 #plantFlag {
 	background: beige;
@@ -217,6 +224,7 @@ img {
 	position: absolute;
 	right: 0;
 	top: 1%;
+	cursor: hand;
 }
 #explore a {
 	text-decoration: none;

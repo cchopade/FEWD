@@ -14,3 +14,11 @@ function plantFlag(event) {
 function landSpaceship() {
 	$("#spaceshipOnMars").animate({ top: "50%", left : "10%"}, 1500);
 }
+
+
+$("#explore").click(closeWindow);
+function closeWindow() {
+	window.close();  
+}
+
+console.log(window);

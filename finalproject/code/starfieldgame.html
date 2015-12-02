@@ -11,9 +11,6 @@
 		<!-- Optional theme -->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 
-		<!-- Latest compiled and minified JavaScript -->
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/starfieldgame.css" media="screen" type="text/css" />
 	</head>
@@ -82,7 +79,9 @@
 							<h2> Welcome to Mars </h2>
 							<p class="basicInfo"> Mars is the fourth planet from the Sun and the second smallest planet in the Solar System </p>
 							<p class="funFact"> <em> Fun Fact: </em> Scientists at NASA recently discovered evidence of liquid water on Mars' surface </p>
-							<a href="mars.html" id="marsLink"> Land on Mars </a>
+							<a target="_blank" href="mars.html" id="marsLink"> Land on Mars </a>
+							<br/>
+							<a href="#" class="captainsLog"> Send findings home </a>
 						</div>
 					</div>
 					<div class="col-xs-4">
@@ -117,18 +116,15 @@
 					<h1> Mission Control </h1>
 					<section id="sectionA">
 						<h2> Light Years from Earth </h2>
-						<p> # </p> 
+						<p id="distance"> </p> 
 					</section>
 					<section id="sectionB">
 						<h2> Bodies Explored </h2>
-						<p> # </p> 
+						<p id="explored">  </p> 
 					</section>
 					<section id="sectionC">
 						<h2> Communications Sent to NASA </h2>
-						<ul>
-							<li> Placeholder Text </li>
-							<li> Placeholder Text </li>
-							<li> Placeholder Text </li>
+						<ul id="logList">
 						</ul>
 					</section> 
 				</aside> 
@@ -136,7 +132,45 @@
 		</div>
 	</div>
 
+		<!--Page Opening Lightbox-->
+		<div id="introModal"class="modal fade" tabindex="-1" role="dialog">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">Welcome to the Universe</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p> Explore some of the most mysterious known celestial bodies in our universe and send your findings back to NASA </p>
+		        <p> Use your arrow keys to control the spaceship </p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Ready!</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
+		<!--Captains Log Lightbox-->
+		<div id="captainsLogForm"class="modal fade" tabindex="-1" role="dialog">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">Captains Log</h4>
+		      </div>
+		      <div class="modal-body">
+		      <form>
+		        <textarea id="logText"></textarea>
+		        <input type="submit" id="logSubmit" value="Send to NASA"/>
+		       </form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
 
 
@@ -145,5 +179,7 @@
 
 <!-- js files --> 
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
   <script src="js/starfieldgame.js"></script>
 </html>

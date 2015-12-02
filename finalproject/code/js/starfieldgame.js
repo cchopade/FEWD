@@ -1,5 +1,3 @@
-
-
 //Starfield 
 /**
  * The MIT License (MIT)
@@ -117,7 +115,35 @@ function resize() {
 // End Starfield 
 
 
-//Starfield Game 
+
+
+
+
+
+
+
+
+//Starfield Game
+$(document).ready(function() { 
+
+$('#introModal').modal(); 
+
+
+
+var marsVisited = false;
+var cometVisited = false; 
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Arrow Keypresses
 $(document).on("keydown", moveShip);
@@ -155,30 +181,49 @@ function moveShip (event) {
 }
 
 // Detect collision
-// Figure out coordinates of each planet (top and left)
-// Add a buffer to the planet coordinates 
-// Find the spaceship position
-// If the spaceship position = the planet's position (with a buffer), then display the planet's info box 
 
 function detectCollision() {
+	//Mars Variables 
 	var marsPositionTop = $("#mars").offset().top; 
 	var marsPositionBottom = $("#mars").offset().top + $("#mars").outerHeight(true); 
 	var marsPositionLeft = $("#mars").offset().left; 
 	var marsPositionRight = $("#mars").offset().left + $("#mars").outerWidth(); 
+	//Comet Variables 
+	var cometPositionTop = $("#comet").offset().top; 
+	var cometPositionBottom = $("#comet").offset().top + $("#comet").outerHeight(true); 
+	var cometPositionLeft = $("#comet").offset().left; 
+	var cometPositionRight = $("#comet").offset().left + $("#comet").outerWidth(); 
+	//Europa Varibales 
+	var europaPositionTop = $("#europa").offset().top; 
+	var europaPositionBottom = $("#europa").offset().top + $("#europa").outerHeight(true); 
+	var europaPositionLeft = $("#europa").offset().left; 
+	var europaPositionRight = $("#europa").offset().left + $("#europa").outerWidth(); 
+	//Pluto Variables 
+	var plutoPositionTop = $("#pluto").offset().top; 
+	var plutoPositionBottom = $("#pluto").offset().top + $("#pluto").outerHeight(true); 
+	var plutoPositionLeft = $("#pluto").offset().left; 
+	var plutoPositionRight = $("#pluto").offset().left + $("#pluto").outerWidth(); 
+	//hdab Varibales 
+	var hdabPositionTop = $("#hdab").offset().top; 
+	var hdabPositionBottom = $("#hdab").offset().top + $("#hdab").outerHeight(true); 
+	var hdabPositionLeft = $("#hdab").offset().left; 
+	var hdabPositionRight = $("#hdab").offset().left + $("#hdab").outerWidth(); 
+	//Kepler Varibales 
+	var keplerPositionTop = $("#kepler").offset().top; 
+	var keplerPositionBottom = $("#kepler").offset().top + $("#kepler").outerHeight(true); 
+	var keplerPositionLeft = $("#kepler").offset().left; 
+	var keplerPositionRight = $("#kepler").offset().left + $("#kepler").outerWidth(); 
+	//Kic Varibales 
+	var kicPositionTop = $("#kic").offset().top; 
+	var kicPositionBottom = $("#kic").offset().top + $("#kic").outerHeight(true); 
+	var kicPositionLeft = $("#kic").offset().left; 
+	var kicPositionRight = $("#kic").offset().left + $("#kic").outerWidth();//Andromeda Varibales 
+	var andromedaPositionTop = $("#andromeda").offset().top; 
+	var andromedaPositionBottom = $("#andromeda").offset().top + $("#andromeda").outerHeight(true); 
+	var andromedaPositionLeft = $("#andromeda").offset().left; 
+	var andromedaPositionRight = $("#andromeda").offset().left + $("#andromeda").outerWidth();  
 
-	//var marsEntryZoneTop = marsPositionTop + (marsPositionTop * 0.02);
-	// var marsEntryZoneLeft = marsPositionLeft + (marsPositionLeft * 0.02);  
-
-
-
-	// var cometPosition = $("#comet").offset();
-	// var europaPosition = $("#europa").offset();
-	// var plutoPosition = $("#pluto").offset();
-	// var hdabPosition = $("#hdab").offset();
-	// var keplerPosition = $("#kepler").offset();
-	// var kicPosition = $("#kic").offset();
-	// var andromedaPosition = $("#andromeda").offset();
-
+	//Spaceship Variables 
 	var spaceshipPositionTop = $("#spaceship").offset().top; 
 	var spaceshipPositionBottom = $("#spaceship").offset().top + $("#spaceship").outerHeight(true); 
 	var spaceshipPositionLeft = $("#spaceship").offset().left; 
@@ -187,9 +232,13 @@ function detectCollision() {
 	 console.log('Spaceship Bottom: ' +spaceshipPositionBottom);
 	 console.log('Mars Top: ' +marsPositionTop);
 
+	//Mars If Statements 
 	if (((spaceshipPositionBottom >= marsPositionTop) && (spaceshipPositionBottom <= marsPositionBottom)) && ((spaceshipPositionRight >= marsPositionLeft) && (spaceshipPositionRight <= marsPositionRight))) {
 		//if((spaceshipPositionRight >= marsPositionLeft) && (spaceshipPositionRight <= marsPositionRight)) {
 			$("#marsInfo").css("display","block");
+			$("#distance").text("140 million miles");
+			marsVisited = true; 
+
 		//}
 	}
 	else if(((spaceshipPositionTop <= marsPositionBottom) && (spaceshipPositionTop >= marsPositionTop)) && ((spaceshipPositionRight >= marsPositionLeft) && (spaceshipPositionRight <= marsPositionRight))){
@@ -198,14 +247,47 @@ function detectCollision() {
 		// }
 		//if((spaceshipPositionRight >= marsPositionLeft) && (spaceshipPositionRight <= marsPositionRight)) {
 			$("#marsInfo").css("display","block");
+			$("#distance").text("140 million miles");
+			marsVisited = true; 
 		//}
 	}
 	else {
-		$("#marsInfo").css("display","none"); 
+		$("#marsInfo").css("display","none");
+		$("#distance").text(""); 
 	}
+
+
+
+
+
+
+
+	var planetsVisited = 0; 
+	if (marsVisited) {
+		planetsVisited++; 
+	}
+	if (cometVisited) {
+		planetsVisited++; 
+	}
+	$("#explored").text(planetsVisited); 
+	
 }
 
 
+$(".captainsLog").click(writeCaptainsLog); 
+
+function writeCaptainsLog() {
+	$('#captainsLogForm').modal(); 
+}
+
+$("form").on("submit",sendToNASA); 
+function sendToNASA(event) {
+	event.preventDefault(); 
+	var captainsLogText = $("#logText").val(); 
+	$("#logList").append("<li>" + captainsLogText + "</li>");
+	$('#captainsLogForm').modal("hide");
+	$("#logText").val(""); 
+}
 
 
 
@@ -234,6 +316,9 @@ function detectCollision() {
 //Communications sent to NASA 
 
 
+
+
+});
 
 
 
