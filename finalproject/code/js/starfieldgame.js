@@ -249,13 +249,13 @@ function detectCollision() {
 			marsVisited = true; 
 		//}
 	}
-	else {
-		$("#marsInfo").css("display","none");
-		$("#distance").text(""); 
-	}
+	// else {
+	// 	$("#marsInfo").css("display","none");
+	// 	$("#distance").text(""); 
+	// }
 
 	//Comet If Statements 
-	if (((spaceshipPositionBottom >= cometPositionTop) && (spaceshipPositionBottom <= cometPositionBottom)) && ((spaceshipPositionRight >= cometPositionLeft) && (spaceshipPositionRight <= cometPositionRight))) {
+	else if (((spaceshipPositionBottom >= cometPositionTop) && (spaceshipPositionBottom <= cometPositionBottom)) && ((spaceshipPositionRight >= cometPositionLeft) && (spaceshipPositionRight <= cometPositionRight))) {
 			$("#cometInfo").css("display","block");
 			$("#distance").text("317 million miles");
 			cometVisited = true; 
@@ -265,13 +265,13 @@ function detectCollision() {
 			$("#distance").text("317 million miles");
 			cometVisited = true; 
 	}
-	else {
-		$("#cometInfo").css("display","none");
-		$("#distance").text(""); 
-	}
+	// else {
+	// 	$("#cometInfo").css("display","none");
+	// 	$("#distance").text(""); 
+	// }
 
 	//Europa If Statements 
-	if (((spaceshipPositionBottom >= europaPositionTop) && (spaceshipPositionBottom <= europaPositionBottom)) && ((spaceshipPositionRight >= europaPositionLeft) && (spaceshipPositionRight <= europaPositionRight))) {
+	else if (((spaceshipPositionBottom >= europaPositionTop) && (spaceshipPositionBottom <= europaPositionBottom)) && ((spaceshipPositionRight >= europaPositionLeft) && (spaceshipPositionRight <= europaPositionRight))) {
 			$("#europaInfo").css("display","block");
 			$("#distance").text("390.4 million miles");
 			europaVisited = true; 
@@ -281,13 +281,13 @@ function detectCollision() {
 			$("#distance").text("390.4 million miles");
 			europaVisited = true; 
 	}
-	else {
-		$("#europaInfo").css("display","none");
-		$("#distance").text(""); 
-	}
+	// else {
+	// 	$("#europaInfo").css("display","none");
+	// 	$("#distance").text(""); 
+	// }
 
 	//Pluto If Statements 
-	if (((spaceshipPositionBottom >= plutoPositionTop) && (spaceshipPositionBottom <= plutoPositionBottom)) && ((spaceshipPositionRight >= plutoPositionLeft) && (spaceshipPositionRight <= plutoPositionRight))) {
+	else if (((spaceshipPositionBottom >= plutoPositionTop) && (spaceshipPositionBottom <= plutoPositionBottom)) && ((spaceshipPositionRight >= plutoPositionLeft) && (spaceshipPositionRight <= plutoPositionRight))) {
 			$("#plutoInfo").css("display","block");
 			$("#distance").text("2.66 billion miles");
 			plutoVisited = true; 
@@ -297,13 +297,13 @@ function detectCollision() {
 			$("#distance").text("2.66 billion miles");
 			plutoVisited = true; 
 	}
-	else {
-		$("#plutoInfo").css("display","none");
-		$("#distance").text(""); 
-	}
+	// else {
+	// 	$("#plutoInfo").css("display","none");
+	// 	$("#distance").text(""); 
+	// }
 
 	//hdab If Statements 
-	if (((spaceshipPositionBottom >= hdabPositionTop) && (spaceshipPositionBottom <= hdabPositionBottom)) && ((spaceshipPositionRight >= hdabPositionLeft) && (spaceshipPositionRight <= hdabPositionRight))) {
+	else if (((spaceshipPositionBottom >= hdabPositionTop) && (spaceshipPositionBottom <= hdabPositionBottom)) && ((spaceshipPositionRight >= hdabPositionLeft) && (spaceshipPositionRight <= hdabPositionRight))) {
 			$("#hdabInfo").css("display","block");
 			$("#distance").text("63 light years");
 			hdabVisited = true; 
@@ -313,13 +313,13 @@ function detectCollision() {
 			$("#distance").text("63 light years");
 			hdabVisited = true; 
 	}
-	else {
-		$("#hdabInfo").css("display","none");
-		$("#distance").text(""); 
-	}
+	// else {
+	// 	$("#hdabInfo").css("display","none");
+	// 	$("#distance").text(""); 
+	// }
 
 	//Kepler If Statements 
-	if (((spaceshipPositionBottom >= keplerPositionTop) && (spaceshipPositionBottom <= keplerPositionBottom)) && ((spaceshipPositionRight >= keplerPositionLeft) && (spaceshipPositionRight <= keplerPositionRight))) {
+	else if (((spaceshipPositionBottom >= keplerPositionTop) && (spaceshipPositionBottom <= keplerPositionBottom)) && ((spaceshipPositionRight >= keplerPositionLeft) && (spaceshipPositionRight <= keplerPositionRight))) {
 			$("#keplerInfo").css("display","block");
 			$("#distance").text("1,400 light years");
 			keplerVisited = true; 
@@ -329,13 +329,13 @@ function detectCollision() {
 			$("#distance").text("1,400 light years");
 			keplerVisited = true; 
 	}
-	else {
-		$("#keplerInfo").css("display","none");
-		$("#distance").text(""); 
-	}
+	// else {
+	// 	$("#keplerInfo").css("display","none");
+	// 	$("#distance").text(""); 
+	// }
 
 	//Kic If Statements 
-	if (((spaceshipPositionBottom >= kicPositionTop) && (spaceshipPositionBottom <= kicPositionBottom)) && ((spaceshipPositionRight >= kicPositionLeft) && (spaceshipPositionRight <= kicPositionRight))) {
+	else if (((spaceshipPositionBottom >= kicPositionTop) && (spaceshipPositionBottom <= kicPositionBottom)) && ((spaceshipPositionRight >= kicPositionLeft) && (spaceshipPositionRight <= kicPositionRight))) {
 			$("#kicInfo").css("display","block");
 			$("#distance").text("1,500 light years");
 			kicVisited = true; 
@@ -345,13 +345,13 @@ function detectCollision() {
 			$("#distance").text("1,500 light years");
 			kicVisited = true; 
 	}
-	else {
-		$("#kicInfo").css("display","none");
-		$("#distance").text(""); 
-	}
+	// else {
+	// 	$("#kicInfo").css("display","none");
+	// 	$("#distance").text(""); 
+	// }
 
 	//Andromeda If Statements 
-	if (((spaceshipPositionBottom >= andromedaPositionTop) && (spaceshipPositionBottom <= andromedaPositionBottom)) && ((spaceshipPositionRight >= andromedaPositionLeft) && (spaceshipPositionRight <= andromedaPositionRight))) {
+	else if (((spaceshipPositionBottom >= andromedaPositionTop) && (spaceshipPositionBottom <= andromedaPositionBottom)) && ((spaceshipPositionRight >= andromedaPositionLeft) && (spaceshipPositionRight <= andromedaPositionRight))) {
 			$("#andromedaInfo").css("display","block");
 			$("#distance").text("1,500 light years");
 			andromedaVisited = true; 
@@ -362,7 +362,7 @@ function detectCollision() {
 			andromedaVisited = true; 
 	}
 	else {
-		$("#andromedaInfo").css("display","none");
+		$(".eduInfo").css("display","none");
 		$("#distance").text(""); 
 	}
 
