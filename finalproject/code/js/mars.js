@@ -12,7 +12,7 @@ function plantFlag(event) {
 }
 
 function landSpaceship() {
-	$("#spaceshipOnMars").animate({ top: "50%", left : "10%"}, 1500);
+	$("#spaceshipOnMars").animate({ top: "50%", left : "10%"}, 2000);
 }
 
 
