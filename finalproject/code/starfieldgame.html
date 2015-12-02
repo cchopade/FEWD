@@ -34,6 +34,7 @@
 							<h2> Welcome to Kepler 452b </h2>
 							<p class="basicInfo"> 452b is a rocky world orbiting a sun-like star at almost the same distance that Earth orbits its sun </p>
 							<p class="funFact"> <em> Fun Fact: </em> Due to its similarities to earth, 452b is dubbed "Earth 2.0" </p>
+							<a href="#" class="captainsLog"> Send findings home </a>
 						</div>
 					</div>
 					<div class="col-xs-4">
@@ -42,7 +43,7 @@
 							<h2> Welcome to KIC 8462852 </h2>
 							<p class="basicInfo"> This star's light ocassionally dims by as much as 20%, suggesting that there is some material in orbit around the star that blocks its light </p>
 							<p class="funFact"> <em> Fun Fact: </em> Possible explanations for the variance range from an alien megastructure harnessing energy from the sun (like a Dyson Sphere) to a swarm of comets that got stuck in orbit </p>
-
+							<a href="#" class="captainsLog"> Send findings home </a>
 						</div>
 					</div>
 					<div class="col-xs-4">
@@ -51,6 +52,7 @@
 							<h2> Welcome to Andromeda </h2>
 							<p class="basicInfo"> Andromeda is a spiral galaxy and the nearest major galaxy to our own Milky Way </p>
 							<p class="funFact"> <em> Fun Fact: </em> Andromeda has one trillion stars </p>
+							<a href="#" class="captainsLog"> Send findings home </a>
 						</div>
 					</div>
 				</div>
@@ -61,6 +63,7 @@
 							<h2> Welcome to Pluto </h2>
 							<p class="basicInfo"> Pluto is a dwarf planet and a member of the Kuiper Belt, a mass of objects that orbit the sun beyond Neptune </p>
 							<p class="funFact"> <em> Fun Fact: </em> NASA's New Horizons spacecraft flew past Pluto in July 2015 </p>
+							<a href="#" class="captainsLog"> Send findings home </a>
 						</div>
 					</div>
 					<div class="col-xs-6">
@@ -69,6 +72,7 @@
 							<h2> Welcome to HD189773 Ab </h2>
 							<p class="basicInfo"> The planet's blue color is due to the presence of magnesium silicate micro crystals that scatter the light of its star </p>
 							<p class="funFact"> <em> Fun Fact: </em> The planet is constantly being swept by a horizontal rain of hot sand </p>
+							<a href="#" class="captainsLog"> Send findings home </a>
 						</div>
 					</div>
 				</div>
@@ -90,6 +94,7 @@
 							<h2> Welcome to Comet 67P </h2>
 							<p class="basicInfo"> 67P is the destination of the European Space Agency's Rosetta mission. Rosetta's lander, Philae, landed on 67P in November 2014, becoming the first spacecraft to land on a comet </p>
 							<p class="funFact"> <em> Fun Fact: </em> Each region of the comet is named after an egyptian deity </p>
+							<a href="#" class="captainsLog"> Send findings home </a>
 						</div>
 					</div>
 					<div class="col-xs-4">
@@ -98,6 +103,7 @@
 							<h2> Welcome to Europa </h2>
 							<p class="basicInfo"> Europa is one of Jupiter's moons and the sixth largest in the solar system </p>
 							<p class="funFact"> <em> Fun Fact: </em> Scientists hypothesize that there is a very active ocean below Europa's frozen surface, making it a candidate for life forms </p>
+							<a href="#" class="captainsLog"> Send findings home </a>
 						</div>
 					</div>
 				</div>
@@ -115,7 +121,7 @@
 				<aside id='infoPane'>
 					<h1> Mission Control </h1>
 					<section id="sectionA">
-						<h2> Light Years from Earth </h2>
+						<h2> Distance from Earth </h2>
 						<p id="distance"> </p> 
 					</section>
 					<section id="sectionB">
@@ -138,14 +144,15 @@
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title">Welcome to the Universe</h4>
+		        <h4 class="modalTitle">Welcome to the Universe</h4>
 		      </div>
-		      <div class="modal-body">
-		        <p> Explore some of the most mysterious known celestial bodies in our universe and send your findings back to NASA </p>
-		        <p> Use your arrow keys to control the spaceship </p>
+		      <div class="modalBody">
+		        <p> Explore some of the most mysterious celestial bodies in our universe and send your findings back to NASA </p>
+		        <p id="howTo"> Use your arrow keys to control the spaceship </p>
+		        <small> a project by savanna rovira </small>
 		      </div>
 		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Ready!</button>
+		        <button class="lightboxButton" type="button" class="btn btn-default" data-dismiss="modal">Ready!</button>
 		      </div>
 		    </div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
@@ -157,16 +164,17 @@
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title">Captains Log</h4>
+		        <h4 class="modalTitle">Captains Log</h4>
 		      </div>
-		      <div class="modal-body">
+		      <div class="modalBody">
+		      <p id="instructions"> Send NASA a sentence or two about what your learned during your visit </p>
 		      <form>
 		        <textarea id="logText"></textarea>
 		        <input type="submit" id="logSubmit" value="Send to NASA"/>
 		       </form>
 		      </div>
 		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button class="lightboxButton" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 		      </div>
 		    </div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->

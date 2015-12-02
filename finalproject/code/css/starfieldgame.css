@@ -33,9 +33,14 @@ body, html {
 #leftSide .row div {
 	text-align: center;
 }
+@font-face {
+	font-family: spaceport;
+	src: url(spaceport.ttf);
+}
 
 
-/* Starfield Game Styling */ 
+/********** Starfield Game Styling *********/ 
+/*General*/ 
 nav {
 	background-color: white;
 	width: 10%;
@@ -62,6 +67,9 @@ section {
 #sectionC {
 	height: 50%;
 }
+#sectionC h2 {
+	padding-bottom: 15%;
+}
 h2 {
 	font-weight: bold;
 	text-align: center;
@@ -69,15 +77,21 @@ h2 {
 section p {
 	text-align: center;
 	border: 1px black solid;
-	margin: 15%
-}
-ul li {
-	list-style: disc;
-	list-style-position: inside;
+	margin: 15%;
+	padding: 2%;
 }
 img {
 	max-width: 134px;
 }
+/*Sidebar*/
+ul li {
+	list-style: disc;
+	list-style-position: inside;
+	text-align: left;
+	font-size: .75em;
+}
+
+/*Celestial Bodies*/ 
 #hdab {
 	margin-right: 40%;
 }
@@ -87,6 +101,7 @@ img {
 #andromeda {
 	margin-top: 11%;
 }
+/*Info Boxes*/ 
 .eduInfo {
 	background-color: white;
 	opacity: .75;
@@ -102,6 +117,7 @@ img {
 .eduInfo h2 {
 	text-align: center;
 	padding-bottom:0px;
+	font-family: spaceport;
 }
 .eduInfo em {
 	font-weight: bold;
@@ -115,13 +131,12 @@ img {
 .funFact {
 	padding-bottom: 1%;
 }
-
 #keplerInfo {
 	left: 25%;
 }
 #marsInfo {
-	left: 25%;
-	bottom: 5%;
+	left: 8%;
+    bottom: -79%;
 }
 #marsLink {
 	text-decoration: none;
@@ -130,6 +145,15 @@ img {
 }
 #marsLink:hover {
 	font-weight: bold;
+}
+.captainsLog {
+	text-decoration: none;
+	font-size: .9em;
+	cursor: hand;
+}
+.captainsLog:hover {
+	font-weight: bold;
+	cursor: hand;
 }
 #plutoInfo {
 	left: 51%;
@@ -151,12 +175,13 @@ img {
     bottom: -80%;
 }
 #europaInfo {
-	right: 25%;
+	right: -8%;
+    bottom: -82%;
 }
 #andromedaInfo {
 	right: 25%;
 }
-
+/*Bootstrap Positioning*/ 
 #right {
 	background-color: grey;
 	opacity: .75;
@@ -183,10 +208,44 @@ img {
 	background-color: grey;
 	opacity: .75;
 	height: 100%;
+	font-family: spaceport;
+	text-align: center;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+#infoPane h2 {
+	text-align: center;
+}
+/* Lightbox Styling */ 
+.modalTitle {
+	text-align: center;
+	font-size: 2em;
+	font-family: spaceport;
+}
+.modalBody {
+	text-align: center;
+	padding: 5%;
+}
+#introModal .modalBody {
+	padding-top: 5%;
+    padding-bottom: 2%;
+}
+#howTo {
+	margin-top: 2%;
+	margin-bottom:5%;
+}
+#instructions {
+	margin-bottom: 2%;
+}
+small {
+	font-size: .75em;
+	font-family: spaceport;
 }
 
 
-/* Mars Styling */ 
+
+
+/************* Mars Styling ***********/ 
 #marsBody {
 	background: url(../images/marssurface.png) no-repeat top center #131e27;
 	background-size: 1970px;
