@@ -102,8 +102,10 @@ ul li {
 	margin-top: 11%;
 }
 #spaceship {
-	left: 496px;
-	bottom: 116px;
+	/*left: 496px;
+	bottom: 116px;*/
+	left: 46%;
+    bottom: 15%;
 	position: absolute;
 	height: 13%;
 }
@@ -301,7 +303,23 @@ h2 {
 	padding: 10px;
 }
 
+/******************************************
+ Media Queries 
+******************************************/
 
+@media only screen and (max-width: 1024px) {
+	#infoPane {
+		font-size: .75em;
+	}
+	.eduInfo {
+		z-index: 1;
+	}
+} 
+@media only screen and (max-width: 768px) {
+	#infoPane {
+		font-size: .5em;
+	}
+  }
 
 
 
