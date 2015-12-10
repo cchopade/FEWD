@@ -318,6 +318,9 @@ h2 {
 	#infoPane {
 		font-size: .5em;
 	}
+	img {
+		max-width: 100px;
+	}
   }
 
 
