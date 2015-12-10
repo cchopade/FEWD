@@ -1,23 +1,11 @@
+/********** General Global *********/ 
+
 /* Hacks */ 
 * Box Model Hack */
 * {
   -moz-box-sizing: border-box; /* Firexfox */
   -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
   box-sizing: border-box; /* IE */
-}
-
-/* Clear fix hack */
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-
-.clear {
-  clear: both;
 }
 
 /* General Styling */ 
@@ -29,9 +17,7 @@ body, html {
   overflow: hidden;
   font-size: 1em;
   cursor: url(../images/astronaut.png),default;
-}
-#leftSide .row div {
-	text-align: center;
+  max-width: 1280px;
 }
 @font-face {
 	font-family: spaceport;
@@ -39,23 +25,34 @@ body, html {
 }
 
 
+
 /********** Starfield Game Styling *********/ 
-/*General*/ 
-nav {
-	background-color: white;
-	width: 10%;
-    position: absolute;
-    text-align: center;
-    padding: .5%;
-    border-radius: 5px;
-    opacity: .75;
-}
-nav a {
-	text-decoration: none;
-	color: black;
-}
-nav a:hover {
+
+/*Bootstrap and Global Styles*/ 
+h2 {
 	font-weight: bold;
+	text-align: center;
+}
+img {
+	max-width: 134px;
+}
+button {
+	font-family: spaceport;
+	padding: 3px;
+}
+
+/*Mission Control*/ 
+#infoPane {
+	background-color: grey;
+	opacity: .75;
+	height: 100%;
+	font-family: spaceport;
+	text-align: center;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+#infoPane h2 {
+	text-align: center;
 }
 section {
 	border-bottom: 2px solid black;
@@ -70,28 +67,31 @@ section {
 #sectionC h2 {
 	padding-bottom: 15%;
 }
-h2 {
-	font-weight: bold;
-	text-align: center;
-}
 section p {
 	text-align: center;
 	border: 1px black solid;
 	margin: 15%;
 	padding: 2%;
 }
-img {
-	max-width: 134px;
-}
-/*Sidebar*/
 ul li {
 	list-style: disc;
 	list-style-position: inside;
 	text-align: left;
 	font-size: .75em;
 }
+#email {
+	position: fixed;
+    bottom: 11px;
+    right: 19px;
+    text-decoration: none;
+    color: white;
+}
+#email:hover {
+	cursor: hand;
+	font-weight: bold;
+}
 
-/*Celestial Bodies*/ 
+/*Celestial Bodies requiring special position trailoring*/ 
 #hdab {
 	margin-right: 40%;
 }
@@ -101,7 +101,14 @@ ul li {
 #andromeda {
 	margin-top: 11%;
 }
-/*Info Boxes*/ 
+#spaceship {
+	left: 496px;
+	bottom: 116px;
+	position: absolute;
+	height: 13%;
+}
+
+/*Educational Info Boxes - General Styling*/ 
 .eduInfo {
 	background-color: white;
 	opacity: .75;
@@ -131,14 +138,6 @@ ul li {
 .funFact {
 	padding-bottom: 1%;
 }
-#keplerInfo {
-	left: 71%;
-    top: 0%;
-}
-#marsInfo {
-	left: 69%;
-    top: 34%;
-}
 #marsLink {
 	text-decoration: none;
 	color: red;
@@ -155,6 +154,16 @@ ul li {
 .captainsLog:hover {
 	font-weight: bold;
 	cursor: hand;
+}
+
+/*Educational Info Boxes - special tailoring and positioning*/ 
+#keplerInfo {
+	left: 71%;
+    top: 0%;
+}
+#marsInfo {
+	left: 69%;
+    top: 34%;
 }
 #plutoInfo {
 	left: 49%;
@@ -188,18 +197,8 @@ ul li {
     width: 68%;
     top: -39%;
 }
+
 /*Bootstrap Positioning*/ 
-#right {
-	background-color: grey;
-	opacity: .75;
-	height: 100%;
-}
-#spaceship {
-	left: 496px;
-	bottom: 116px;
-	position: absolute;
-	height: 13%;
-}
 #topRow {
 	margin-top: 5%;
 	margin-bottom: 2%;
@@ -208,21 +207,10 @@ ul li {
 	margin-bottom: 8%;
 	margin-top: 2%;
 }
-#leftSide nav {
-	display: none;
-}
-#infoPane {
-	background-color: grey;
-	opacity: .75;
-	height: 100%;
-	font-family: spaceport;
-	text-align: center;
-	padding-top: 5%;
-	padding-bottom: 5%;
-}
-#infoPane h2 {
+#leftSide .row div {
 	text-align: center;
 }
+
 /* Lightbox Styling */ 
 .modalTitle {
 	text-align: center;
@@ -237,11 +225,11 @@ ul li {
 	padding-top: 5%;
     padding-bottom: 2%;
 }
-#howTo {
+#arrowHowTo {
 	margin-top: 2%;
 	margin-bottom:5%;
 }
-#instructions {
+#logInstructions {
 	margin-bottom: 2%;
 }
 small {
@@ -251,26 +239,11 @@ small {
 
 
 
-
 /************* Mars Styling ***********/ 
 #marsBody {
 	background: url(../images/marssurface.png) no-repeat top center #131e27;
 	background-size: 1970px;
 	cursor: url(../images/astronaut.png),default;
-}
-#plantFlag {
-	background: beige;
-    /*width: 140px;*/
-    left: 50%;
-    top: 300px;
-    border-radius: 11px;
-    padding: 7px;
-    padding-top: 9px;
-    text-align: center;
-    position: absolute;
-    transform: translateX(-50%);
-    font-size: 1.1em;
-    cursor: hand;
 }
 #spaceshipOnMars {
 	position: absolute;
@@ -283,49 +256,35 @@ small {
     left: 47%;
     display: none;
 }
-#explore {
-	background: beige;
-	border-radius: 11px;
+/*Buttons*/ 
+#marsBody button {
+	font-family: spaceport;
 	padding: 7px;
-	padding-top: 9px;
+    padding-top: 9px;
+	background: beige;
 	text-align: center;
 	position: absolute;
-	right: 1%;
-	top: 1%;
+	border-radius: 11px;
 	cursor: hand;
 	font-size: 1.1em;
 }
-#explore a {
+#marsBody button a {
 	text-decoration: none;
 	color: black;
 }
-#plantFlag a{
-	text-decoration: none;
-	color: black;
-}
-#explore a:hover {
+#marsBody button a:hover {
 	font-weight: bold;
 	cursor: hand;
+} 
+#plantFlag {
+    left: 50%;
+    top: 300px;
+    transform: translateX(-50%);
 }
-#plantFlag a:hover {
-	font-weight: bold;
+#explore {
+	right: 1%;
+	top: 1%;
 }
-button {
-	font-family: spaceport;
-	padding: 1%;
-}
-#email {
-	position: fixed;
-    bottom: 11px;
-    right: 19px;
-    text-decoration: none;
-    color: white;
-}
-#email:hover {
-	cursor: hand;
-	font-weight: bold;
-}
-
 
 
 /* About Page Styling */

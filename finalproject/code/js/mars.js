@@ -1,9 +1,12 @@
+//Colonize Mars js file 
+
+
 $(document).ready(function() {
 
 //Event Listeners
 landSpaceship();
 $("#plantFlag").click(plantFlag);
-
+$("#explore").click(closeWindow);
 });
 
 //Functions 
@@ -15,10 +18,7 @@ function landSpaceship() {
 	$("#spaceshipOnMars").animate({ top: "50%", left : "10%"}, 2000);
 }
 
-
-$("#explore").click(closeWindow);
 function closeWindow() {
 	window.close();  
 }
 
-console.log(window);

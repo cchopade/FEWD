@@ -5,11 +5,11 @@
 	    <meta name="description" content="Explore fascinating celestial bodies with this interactive web game.">
 
 	    <title>Universe Explorer</title>
-		<!-- Latest compiled and minified CSS -->
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+		<!-- Bootstrap: Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
-		<!-- Optional theme -->
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+		<!-- Bootstrap: Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/starfieldgame.css" media="screen" type="text/css" />
@@ -18,17 +18,16 @@
   <body onload="start()"
         onresize="resize()"
         onorientationchange="resize()">
-    	<canvas id="starfield" ></canvas>
+    <canvas id="starfield" ></canvas>
     <audio autoplay loop>
 		<source src="audio/starwars.mp3" type="audio/mpeg"/>
-	</audio>	
+	</audio>
+
+	<!-- Left Side of Page - Includes Celestial Bodies -->	
 	<div class="row">
 		<div class="col-xs-10">	
 			<div id="leftSide">
-		    	<nav> 
-		    		<a href="about.html">About</a>
-		    	</nav>
-
+				<!--Top row of Celestial Bodies (Kepler, KIC, Andromeda) -->
 				<div class="row" id="topRow">
 					<div class="col-xs-4">
 						<img src="images/kepler.png" alt="kepler" id="kepler"/>
@@ -58,6 +57,7 @@
 						</div>
 					</div>
 				</div>
+				<!--Middle row of Celestial Bodies (Pluto, HD Ab) -->
 				<div class="row">
 					<div class="col-xs-6">
 						<img src="images/pluto.png" alt="pluto" id="pluto"/>
@@ -78,6 +78,7 @@
 						</div>
 					</div>
 				</div>
+				<!--Bottom row of Celestial Bodies (Mars, Comet, Europa) -->
 				<div class="row" id="bottomPlanetRow">
 					<div class="col-xs-4">
 						<img src="images/mars.png" alt="mars" id="mars"/>
@@ -109,6 +110,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- Earth and spaceship launch position -->
 				<div class="row">
 					<div class="col-xs-12">
 						<img src="images/earth.png" alt="earth" id="earth"/>
@@ -118,6 +120,7 @@
 			<img src="images/spaceship.png" alt="spaceship" id="spaceship"/> 
 		</div>
 
+		<!-- Right Side of Page - Includes Mission Control Board -->
 		<div class="col-xs-2">	
 			<div id="rightSide">
 				<aside id='infoPane'>
@@ -141,7 +144,7 @@
 		</div>
 	</div>
 
-		<!--Page Opening Lightbox-->
+		<!--Page Opening Modal-->
 		<div id="introModal"class="modal fade" tabindex="-1" role="dialog">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
@@ -151,17 +154,17 @@
 		      </div>
 		      <div class="modalBody">
 		        <p> Explore some of the most mysterious celestial bodies in our universe and send your findings back to NASA </p>
-		        <p id="howTo"> Use your arrow keys to control the spaceship </p>
+		        <p id="arrowHowTo"> Use your arrow keys to control the spaceship </p>
 		        <small> a project by savanna rovira </small>
 		      </div>
 		      <div class="modal-footer">
 		        <button class="lightboxButton" type="button" class="btn btn-default" data-dismiss="modal">Ready!</button>
 		      </div>
-		    </div><!-- /.modal-content -->
-		  </div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
+		    </div>
+		  </div>
+		</div>
 
-		<!--Captains Log Lightbox-->
+		<!--Captains Log Modal-->
 		<div id="captainsLogForm"class="modal fade" tabindex="-1" role="dialog">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
@@ -170,7 +173,7 @@
 		        <h4 class="modalTitle">Captains Log</h4>
 		      </div>
 		      <div class="modalBody">
-		      <p id="instructions"> Send NASA a sentence or two about what your learned during your visit </p>
+		      <p id="logInstructions"> Send NASA a sentence or two about what your learned during your visit </p>
 		      <form>
 		        <textarea id="logText"></textarea>
 		        <input type="submit" id="logSubmit" value="Send to NASA"/>
@@ -179,18 +182,14 @@
 		      <div class="modal-footer">
 		        <button class="lightboxButton" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 		      </div>
-		    </div><!-- /.modal-content -->
-		  </div><!-- /.modal-dialog -->
-		</div><!-- /.modal -->
-
-
-
+		    </div>
+		  </div>
+		</div>
   </body>
 
 
 <!-- js files --> 
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <!-- Latest compiled and minified JavaScript -->
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-  <script src="js/starfieldgame.js"></script>
+  	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  	<script src="js/starfieldgame.js"></script>
 </html>
