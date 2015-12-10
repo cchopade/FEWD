@@ -17,7 +17,6 @@ body, html {
   overflow: hidden;
   font-size: 1em;
   cursor: url(../images/astronaut.png),default;
-  max-width: 1280px;
 }
 @font-face {
 	font-family: spaceport;
