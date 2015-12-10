@@ -288,7 +288,6 @@ small {
 }
 
 
-/* About Page Styling */
 h1 {
 	text-align: center;
 	font-weight: bold;
@@ -297,9 +296,6 @@ h1 {
 h2 {
 	text-align: left;
 	padding: 5px;
-}
-.abouts p {
-	padding: 10px;
 }
 
 /******************************************
@@ -318,10 +314,7 @@ h2 {
 	#infoPane {
 		font-size: .5em;
 	}
-	img {
-		max-width: 100px;
-	}
-  }
+ }
 
 
 
